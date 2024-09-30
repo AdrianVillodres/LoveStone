@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu(fileName = "Entity", menuName = "ScriptableObjects/Entity")]
 
-public class Invocable : MonoBehaviour
+public class EntitySO : ScriptableObject
 {
-    public int mana;
-    public int CurrentMana;
-    public static void Play()
-    {
-
-    }
-
+    public string name;
+    public Sprite design;
     // Start is called before the first frame update
     void Start()
     {

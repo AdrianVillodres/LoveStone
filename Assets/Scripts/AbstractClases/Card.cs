@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : Invocable
+public abstract class Card : Invocable
 {
     public int rarity;
-    public property = Avatar;
+
     // Start is called before the first frame update
     void Start()
     {

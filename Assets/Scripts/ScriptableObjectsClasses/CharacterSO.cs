@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Character")]
 
-public class CharacterCard : Card
+public class CharacterSO : EntitySO
 {
-    public Character: characterSO;
-    public static Invoke
+    public int damage;
+    public int hp;
+
     // Start is called before the first frame update
     void Start()
     {
