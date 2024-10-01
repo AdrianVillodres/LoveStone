@@ -18,7 +18,7 @@ public abstract class Fighter : MonoBehaviour
     {
         
     }
-    public void Awake()
+    public void Attack(Fighter fighter)
     {
         
     }

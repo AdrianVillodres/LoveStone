@@ -7,7 +7,7 @@ public abstract class Token : Fighter
     public int position;
     public int currentDamage;
     public int currentHp;
-   //public characterSO character;
+    public CharacterSO characterSO;
 
     // Start is called before the first frame update
     void Start()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class CharacterCard : Card
 {
+    public CharacterSO characterSO;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,14 @@ public abstract class CharacterCard : Card
         
     }
 
-    public void Invoke()
+    public void Invoke(Token token)
     {
 
+    }
+
+    public void PassData()
+    {
+        GameManager.gameManager.ChMana.text = this.mana.ToString();
+        GameManager.gameManager.ChHP.text = this.characterSO.hp.ToString();
     }
 }

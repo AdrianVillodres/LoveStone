@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class SpellCard : Card
 {
-    // Start is called before the first frame update
+    public EntitySO entitySO;
     void Start()
     {
         

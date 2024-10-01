@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Power : Invocable
 {
-    //public EntitySO entitySO;
+    public EntitySO entitySO;
 
 
     // Start is called before the first frame update

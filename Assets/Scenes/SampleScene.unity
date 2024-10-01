@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -104,7 +103,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +116,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -162,7 +161,6 @@ RectTransform:
   - {fileID: 663300137}
   - {fileID: 272358014}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -226,7 +224,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -261,7 +261,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1640270117}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -341,7 +340,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2134000586}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -417,7 +415,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 272358014}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -498,7 +495,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 903821414}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -591,7 +587,6 @@ RectTransform:
   - {fileID: 186231469}
   - {fileID: 2134000586}
   m_Father: {fileID: 58034317}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -610,12 +605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09e77d7e086626448bc913a5a877ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mana: 2
-  CurrentMana: 0
-  Rarity: 0
-  Avatar: {fileID: 0}
-  Entity: {fileID: 11400000, guid: dd9649e3c5d2d9146903b43b64985d83, type: 2}
-  EffectDesc: Deal 3 damage to a character and Freeze it
 --- !u!114 &272358016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,9 +683,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -730,13 +727,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597427427
 GameObject:
@@ -771,11 +768,10 @@ RectTransform:
   m_Children:
   - {fileID: 903821414}
   m_Father: {fileID: 58034317}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 31.1, y: 111.4}
+  m_AnchoredPosition: {x: 171, y: 219}
   m_SizeDelta: {x: 189.1, y: 223.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597427429
@@ -790,13 +786,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc96bf0aec0ee5b4788ce1099fcd7145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
-  HP: 0
-  CurrentHP: 0
-  CurrentDamage: 0
-  power: {fileID: 0}
-  Armor: 0
-  Entity: {fileID: 11400000, guid: 5bdf5abc06152f24da9f5888e04c8e2f, type: 2}
 --- !u!114 &597427430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,11 +858,10 @@ RectTransform:
   - {fileID: 1773141843}
   - {fileID: 1005614706}
   m_Father: {fileID: 58034317}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 172, y: 77}
+  m_AnchoredPosition: {x: -179, y: 46}
   m_SizeDelta: {x: 150.5, y: 174.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663300138
@@ -888,9 +876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7579734847e034f8c5b1bbed13be4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mana: 2
-  CurrentMana: 0
-  Entity: {fileID: 11400000, guid: 41f7a278f218e7c44a72eb0ea07dd20e, type: 2}
 --- !u!114 &663300139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +945,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1931049179}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1082,7 +1066,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1640270117}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1122,7 +1105,6 @@ RectTransform:
   m_Children:
   - {fileID: 228885599}
   m_Father: {fileID: 597427428}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1211,7 +1193,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 58034317}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1289,7 +1270,6 @@ RectTransform:
   m_Children:
   - {fileID: 2105212857}
   m_Father: {fileID: 663300137}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1378,7 +1358,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1057132102}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -1456,7 +1435,6 @@ RectTransform:
   m_Children:
   - {fileID: 1024985816}
   m_Father: {fileID: 58034317}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -1545,7 +1523,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1931049179}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1627,7 +1604,6 @@ RectTransform:
   m_Children:
   - {fileID: 2124772323}
   m_Father: {fileID: 1640270117}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1745,13 +1721,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452989406}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640270116
 GameObject:
@@ -1788,11 +1764,10 @@ RectTransform:
   - {fileID: 713624744}
   - {fileID: 60202998}
   m_Father: {fileID: 58034317}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 266, y: 229}
+  m_AnchoredPosition: {x: 126, y: 22}
   m_SizeDelta: {x: 194.4, y: 218.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640270118
@@ -1807,12 +1782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0595fe237e4ec844b934f4bd9413a5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
-  HP: 0
-  CurrentHP: 0
-  CurrentDamage: 0
-  Position: 0
-  Character: {fileID: 11400000, guid: 4c9e64ce5b0379b438d5976670bed1d4, type: 2}
 --- !u!114 &1640270119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1851,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1931049179}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1957,23 +1925,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1729264042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec8105849cc0904eb66ab433f9069d2, type: 3}
+  m_Script: {fileID: 11500000, guid: a3d2a00dfc410624c9f2a1571434837f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Char: {fileID: 1024985818}
-  Spell: {fileID: 182346083}
-  Token: {fileID: 2124772325}
-  Power: {fileID: 2105212860}
-  Avatar: {fileID: 228885602}
-  CharMana: {fileID: 1807612256}
-  CharDMG: {fileID: 684022717}
-  CharHP: {fileID: 1679117136}
-  CharDesc: {fileID: 1304076499}
-  SpellMana: {fileID: 1771529041}
-  SpellDesc: {fileID: 186231471}
-  PowerMana: {fileID: 1773141845}
-  TokenHP: {fileID: 60203000}
-  TokenDMG: {fileID: 713624742}
+  ChMana: {fileID: 1807612256}
+  ChHP: {fileID: 1679117136}
+  ChDescription: {fileID: 1304076499}
+  ChImage: {fileID: 1024985818}
 --- !u!4 &1729264044
 Transform:
   m_ObjectHideFlags: 0
@@ -1981,13 +1939,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729264042}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 417.50098, y: 172.12299, z: -1.8934659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771529038
 GameObject:
@@ -2020,7 +1978,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 272358014}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2100,7 +2057,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 663300137}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2180,7 +2136,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1931049179}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2241,6 +2196,7 @@ GameObject:
   - component: {fileID: 1931049182}
   - component: {fileID: 1931049181}
   - component: {fileID: 1931049180}
+  - component: {fileID: 1931049183}
   m_Layer: 5
   m_Name: CharacterCard
   m_TagString: Untagged
@@ -2265,7 +2221,6 @@ RectTransform:
   - {fileID: 1679117134}
   - {fileID: 1304076497}
   m_Father: {fileID: 58034317}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -2284,13 +2239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386685ae7c2c16142a4ae43698c8bedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mana: 8
-  CurrentMana: 0
-  Rarity: 0
-  Avatar: {fileID: 0}
-  Character: {fileID: 11400000, guid: afcde5bf69d48fe4bafe8590890ad5ba, type: 2}
-  EffectDescription: Can't attack. At the end of your turn, deal 8 damage to a random
-    enemy
 --- !u!114 &1931049181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,6 +2277,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931049178}
   m_CullTransparentMesh: 1
+--- !u!114 &1931049183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931049178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a2eaa580a93204689582ce0e52d3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: 21
+  currentMana: 0
+  rarity: 0
+  property: {fileID: 0}
+  characterSO: {fileID: 0}
 --- !u!1 &2105212856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2326,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005614706}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2450,7 +2414,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1434368726}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2528,7 +2491,6 @@ RectTransform:
   m_Children:
   - {fileID: 182346081}
   m_Father: {fileID: 272358014}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -2586,3 +2548,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134000585}
   m_CullTransparentMesh: 1
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 519420032}
+  - {fileID: 58034317}
+  - {fileID: 1452989409}
+  - {fileID: 1729264044}

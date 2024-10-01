@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Card : Invocable
 {
     public int rarity;
-
+    public Avatar property;
     // Start is called before the first frame update
     void Start()
     {
