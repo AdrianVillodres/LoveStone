@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c71c6d93b07f324186131a677b44606, type: 3}
-  m_Name: Anduin
+  m_Name: Fireball
   m_EditorClassIdentifier: 
-  name: Anduin Wrynn
+  name: Fireball
   description: 
-  design: {fileID: 21300000, guid: 1e4fa95fc9914d64ca23602acbeb29e9, type: 3}
+  design: {fileID: 0}

@@ -23,4 +23,8 @@ public abstract class Avatar : Fighter
     {
         
     }
+    public void PassData()
+    {
+        GameManager.gameManager.AVImage.sprite = this.entitySO.design;
+    }
 }

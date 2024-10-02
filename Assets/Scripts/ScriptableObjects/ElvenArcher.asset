@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c71c6d93b07f324186131a677b44606, type: 3}
-  m_Name: Anduin
+  m_Script: {fileID: 11500000, guid: d70a37ddbc634a041b0c28f14bf2f001, type: 3}
+  m_Name: ElvenArcher
   m_EditorClassIdentifier: 
-  name: Anduin Wrynn
+  name: Elven Archer
+  description: 'Battlecry: Deal 1 damage.'
+  design: {fileID: 21300000, guid: ab97ed18e1a38b2438a2c09c321040d4, type: 3}
+  damage: 1
+  hp: 1
   description: 
-  design: {fileID: 21300000, guid: 1e4fa95fc9914d64ca23602acbeb29e9, type: 3}

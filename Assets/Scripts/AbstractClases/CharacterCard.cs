@@ -27,5 +27,8 @@ public abstract class CharacterCard : Card
     {
         GameManager.gameManager.ChMana.text = this.mana.ToString();
         GameManager.gameManager.ChHP.text = this.characterSO.hp.ToString();
+        GameManager.gameManager.ChDamage.text = this.characterSO.damage.ToString();
+        GameManager.gameManager.ChDescription.text = this.characterSO.description.ToString();
+        GameManager.gameManager.ChImage.sprite = this.characterSO.design;
     }
 }

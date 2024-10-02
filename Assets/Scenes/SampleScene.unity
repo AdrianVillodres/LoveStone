@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 228885602}
   - component: {fileID: 228885600}
   m_Layer: 5
-  m_Name: AvatarDesign
+  m_Name: arDesignsign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 272358017}
   - component: {fileID: 272358016}
   - component: {fileID: 272358015}
+  - component: {fileID: 272358018}
   m_Layer: 5
   m_Name: SpellCard
   m_TagString: Untagged
@@ -643,6 +644,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272358013}
   m_CullTransparentMesh: 1
+--- !u!114 &272358018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272358013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35c8d874c1edd644bd64729efa46176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: 2
+  currentMana: 0
+  rarity: 0
+  property: {fileID: 0}
+  entitySO: {fileID: 11400000, guid: 14a5c2927cd35c64ca738a3a05c3f640, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +765,7 @@ GameObject:
   - component: {fileID: 597427431}
   - component: {fileID: 597427430}
   - component: {fileID: 597427429}
+  - component: {fileID: 597427432}
   m_Layer: 5
   m_Name: Avatar
   m_TagString: Untagged
@@ -824,6 +843,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597427427}
   m_CullTransparentMesh: 1
+--- !u!114 &597427432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597427427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f491d7af01ffbaf47a0e816c0eb6d91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  hp: 0
+  team: 0
+  power: {fileID: 0}
+  armor: 0
+  entitySO: {fileID: 11400000, guid: 17b373ad5d0334c4a92990b6f0e9746e, type: 2}
 --- !u!1 &663300136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,9 +1816,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640270116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0595fe237e4ec844b934f4bd9413a5e4, type: 3}
+  m_Script: {fileID: 11500000, guid: e4733a1bf5d6c2e448be1d5774a054ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 3
+  hp: 3
+  team: 0
+  position: 0
+  currentDamage: 0
+  currentHp: 0
+  characterSO: {fileID: 11400000, guid: 08b04733122d20444a82167c51aeedac, type: 2}
 --- !u!114 &1640270119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,8 +1974,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChMana: {fileID: 1807612256}
   ChHP: {fileID: 1679117136}
+  ChDamage: {fileID: 684022717}
   ChDescription: {fileID: 1304076499}
+  TDamage: {fileID: 713624742}
+  THP: {fileID: 60203000}
+  PMana: {fileID: 1773141845}
+  SCMana: {fileID: 1771529041}
+  SCDescription: {fileID: 186231471}
   ChImage: {fileID: 1024985818}
+  AVImage: {fileID: 228885602}
+  TOImage: {fileID: 2124772325}
+  POImage: {fileID: 2105212860}
+  SPCImage: {fileID: 182346083}
 --- !u!4 &1729264044
 Transform:
   m_ObjectHideFlags: 0
@@ -2197,6 +2251,7 @@ GameObject:
   - component: {fileID: 1931049181}
   - component: {fileID: 1931049180}
   - component: {fileID: 1931049183}
+  - component: {fileID: 1931049184}
   m_Layer: 5
   m_Name: CharacterCard
   m_TagString: Untagged
@@ -2284,16 +2339,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931049178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59a2eaa580a93204689582ce0e52d3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mana: 21
+  mana: 3
   currentMana: 0
   rarity: 0
   property: {fileID: 0}
-  characterSO: {fileID: 0}
+  characterSO: {fileID: 11400000, guid: 5e717e3133d92b54ebf688624c3db23b, type: 2}
+--- !u!114 &1931049184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931049178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca4e20a28cea284ebbb3ce8eb1a9753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: 2
+  currentMana: 0
+  rarity: 0
+  property: {fileID: 0}
+  characterSO: {fileID: 11400000, guid: 1dc312327502dc347a78fceb768d856d, type: 2}
 --- !u!1 &2105212856
 GameObject:
   m_ObjectHideFlags: 0

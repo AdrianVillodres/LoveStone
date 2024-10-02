@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
 
-    public Text ChMana, ChHP, ChDescription;
-    public Image ChImage;
+    public Text ChMana, ChHP, ChDamage, ChDescription, TDamage, THP, PMana, SCMana, SCDescription;
+    public Image ChImage, AVImage, TOImage, POImage, SPCImage;
 
     void Awake()
     {

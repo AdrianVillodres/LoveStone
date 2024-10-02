@@ -6,16 +6,7 @@ using UnityEngine;
 public class EntitySO : ScriptableObject
 {
     public string name;
+    public string description;
     public Sprite design;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

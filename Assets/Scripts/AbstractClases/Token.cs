@@ -12,12 +12,18 @@ public abstract class Token : Fighter
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    public void PassData()
+    {
+        GameManager.gameManager.TDamage.text = this.damage.ToString();
+        GameManager.gameManager.THP.text = this.hp.ToString();
+        GameManager.gameManager.TOImage.sprite = this.characterSO.design;
     }
 }

@@ -27,7 +27,7 @@ public class ElvenArcher : CharacterCard, IEffect, IOnStart
     // Start is called before the first frame update
     void Start()
     {
-        
+        base.PassData();
     }
 
     // Update is called once per frame
