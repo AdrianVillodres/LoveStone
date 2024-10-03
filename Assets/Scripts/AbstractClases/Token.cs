@@ -22,8 +22,8 @@ public abstract class Token : Fighter
     }
     public void PassData()
     {
-        GameManager.gameManager.TDamage.text = this.damage.ToString();
-        GameManager.gameManager.THP.text = this.hp.ToString();
+        GameManager.gameManager.TDamage.text = this.characterSO.damage.ToString();
+        GameManager.gameManager.THP.text = this.characterSO.hp.ToString();
         GameManager.gameManager.TOImage.sprite = this.characterSO.design;
     }
 }

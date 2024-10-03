@@ -910,7 +910,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 663300136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c7579734847e034f8c5b1bbed13be4e, type: 3}
+  m_Script: {fileID: 11500000, guid: b2a76adba2ddf1347b7024388cb4efc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &663300139
@@ -2251,7 +2251,6 @@ GameObject:
   - component: {fileID: 1931049181}
   - component: {fileID: 1931049180}
   - component: {fileID: 1931049183}
-  - component: {fileID: 1931049184}
   m_Layer: 5
   m_Name: CharacterCard
   m_TagString: Untagged
@@ -2339,33 +2338,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931049178}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59a2eaa580a93204689582ce0e52d3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mana: 3
+  mana: 1
   currentMana: 0
   rarity: 0
   property: {fileID: 0}
   characterSO: {fileID: 11400000, guid: 5e717e3133d92b54ebf688624c3db23b, type: 2}
---- !u!114 &1931049184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931049178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca4e20a28cea284ebbb3ce8eb1a9753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mana: 2
-  currentMana: 0
-  rarity: 0
-  property: {fileID: 0}
-  characterSO: {fileID: 11400000, guid: 1dc312327502dc347a78fceb768d856d, type: 2}
 --- !u!1 &2105212856
 GameObject:
   m_ObjectHideFlags: 0
